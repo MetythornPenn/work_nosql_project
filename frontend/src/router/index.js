@@ -1,13 +1,20 @@
 import { createRouter, createWebHistory } from 'vue-router'
+
 import dashboard from '../views/dashboard.vue'
 import user from '../views/user.vue'
 import book from '../views/book.vue'
+import project from '../views/project.vue'
 
 const routes = [
   {
     path: '/',
     name: 'dashboard',
     component: dashboard
+  },
+  {
+    path: '/project',
+    name : 'project',
+    component : project
   },
   {
     path: '/user',
@@ -30,3 +37,7 @@ const router = createRouter({
 })
 
 export default router
+
+
+
+

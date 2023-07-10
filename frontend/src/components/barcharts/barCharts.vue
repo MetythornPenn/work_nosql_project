@@ -1,9 +1,9 @@
 <template>
   <div>
-   <apexchart 
-     width="100%" type="bar" 
-     :options="options" :series="series">
-   </apexchart>  
+    <apexchart 
+      width="100%" type="bar" 
+      :options="options" :series="series">
+    </apexchart>  
   </div>
 </template>
 
@@ -23,18 +23,18 @@ export default {
       },
       xaxis: {
         categories: [
-         "Jan",
-         "Feb",
-         "Mar",
-         "Apr",
-         "May",
-         "Jun",
-         "Jul",
-         "Aug",
-         "Sep",
-         "Oct",
-         "Nov",
-         "Dec"
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec"
         ]
       }
     },

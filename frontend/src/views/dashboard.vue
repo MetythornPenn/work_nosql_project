@@ -8,13 +8,15 @@
 </template>
 
 <script>
-import BarCharts from "@/components/barcharts/barCharts.vue";
-import LineChart from "@/components/barcharts/lineChart.vue";
-import PieChart from "@/components/barcharts/pieChart.vue";
+  import BarCharts from "@/components/barcharts/barCharts.vue";
+  import LineChart from "@/components/barcharts/lineChart.vue";
+  import PieChart from "@/components/barcharts/pieChart.vue";
 
 
-export default {
-  name: 'HelloWorld',
-  components:{BarCharts, LineChart, PieChart}
-}
+  export default {
+    name: 'HelloWorld',
+    components:{BarCharts, LineChart, PieChart}
+  }
 </script>
+
+

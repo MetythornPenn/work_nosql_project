@@ -1,0 +1,164 @@
+{
+	"info": {
+		"_postman_id": "1a229d9f-7c92-406e-9227-e89c48ca4e85",
+		"name": "Project",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25469484"
+	},
+	"item": [
+		{
+			"name": "1-Total by Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/total-by-country",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"total-by-country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2-Total Sale by Month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/total-by-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"total-by-month"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.1 Total Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/customer-puchaseed-by-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"customer-puchaseed-by-month"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "3.2 New Customer each Month",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/new-customer-by-month",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"new-customer-by-month"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "4-Best Selling Product by Country",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/best-selling-by-country",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"best-selling-by-country"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "5-Best Selling Products Overall",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/most-successful-product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"most-successful-product"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "6-Most Contribute Customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/v1/sales/most-contributed-customer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"v1",
+						"sales",
+						"most-contributed-customer"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

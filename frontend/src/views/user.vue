@@ -80,17 +80,21 @@
       }
     },
     methods: {
+
+
       getData(){
         axios
         .get('http://localhost:3000/api/v1/users?page=1&limit=1000')
         .then((response) => {
           console.log(response);
           this.userList = response.data.docs;
+
         }).catch((error) => {
           console.log(error);
           this.errorMsg = "Error"
         })
       },
+
 
       deleteData(id){
         axios   
@@ -98,11 +102,13 @@
         .then((response) => {
           console.log(response);
           this.getData();
+
         }).catch((error) => {
           console.log(error);
           this.errorMsg = "Error"
         })
       },
+
 
       addData(){
         console.log(this.formData);
@@ -111,22 +117,26 @@
         .then((response) => {
           console.log(response);
           this.getData();
+
         }).catch((error) => {
           console.log(error);
           this.errorMsg = "Error"
         })
       },
 
+
       findData(id){
         axios
         .get('http://localhost:3000/api/v1/users/' + id)
         .then((response) => {
           this.formData = response.data;
+
         }).catch((error) => {
           console.log(error);
           this.errorMsg = "Error"
         })
       },
+
       
       updateData(){
         console.log(this.formData);
@@ -135,12 +145,14 @@
         .then((response) => {
           console.log(response);
           this.getData();
+
         }).catch((error) => {
           console.log(error);
           this.errorMsg = "Error"
         })
       }
     },
+
     mounted() {
       this.getData();
     }

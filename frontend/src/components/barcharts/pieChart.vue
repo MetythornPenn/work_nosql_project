@@ -24,7 +24,7 @@ export default {
     chartOptions() {
       return {
         title: {
-          text: "Total sale for each country",
+          text: "1. What are the total sales by each country?",
           align: "center",
           style: {
             fontSize: "20px",
