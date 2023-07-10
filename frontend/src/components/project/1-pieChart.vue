@@ -10,6 +10,7 @@
 
 <script>
 import axios from "axios";
+
 export default {
   data: () => ({
     dataRecords: [],
@@ -51,6 +52,7 @@ export default {
       };
     },
   },
+
   methods: {
     initData() {
 
@@ -59,12 +61,14 @@ export default {
         .then((response) => {
           console.log(response.data.total_of_sales);
           this.dataRecords = Object.assign([],response.data.total_of_sales);
+
       }).catch((error) => {
           console.log(error);
           this.errorMsg = "Error"
       })
     },
   },
+  
   mounted() {
     setTimeout(() => {
       this.initData();

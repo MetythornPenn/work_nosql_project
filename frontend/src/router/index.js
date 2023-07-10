@@ -6,29 +6,35 @@ import book from '../views/book.vue'
 import project from '../views/project.vue'
 
 const routes = [
+
+  //localhost:8080:/ router (dashboard)
   {
     path: '/',
     name: 'dashboard',
     component: dashboard
   },
+
+  //localhost:8080:/project router 
   {
     path: '/project',
     name : 'project',
     component : project
   },
+
+  //localhost:8080:/user router 
   {
     path: '/user',
     name: 'user',
     component: user
   },
+
+  //localhost:8080:/book router 
   {
     path: '/book',
     name: book,
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/book.vue')
   }
+
 ]
 
 const router = createRouter({

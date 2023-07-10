@@ -8,7 +8,9 @@
   </div>
 </template>
 
+
 <script>
+
 import axios from "axios";
 export default {
   data: () => ({
@@ -51,6 +53,7 @@ export default {
       };
     },
   },
+
   methods: {
     initData() {
 
@@ -71,4 +74,5 @@ export default {
     }, 3000);
   },
 };
+
 </script>

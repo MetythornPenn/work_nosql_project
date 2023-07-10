@@ -1,6 +1,5 @@
 <template>
   <nav>
-    
     <router-link to="/">Dashboard</router-link> |
     <router-link to="/project"> Project </router-link> | 
     <router-link to="/user">User</router-link> | 
