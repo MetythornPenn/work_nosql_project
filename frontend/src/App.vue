@@ -1,4 +1,6 @@
 <template>
+
+<!-- -------------------------- -->
   <div>
     <nav class="navbar">
       <img :src="require('@/assets/logo.png')" alt="Logo" class="logo" />

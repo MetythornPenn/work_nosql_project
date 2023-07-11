@@ -37,11 +37,3 @@ app.use('/api/v1/users' , userRoute);
 app.use('/api/v1/dashboard' , dashboardRoute);
 app.use('/api/v1/sales' , saleRoute);
 
-
-
-
-
-
-
-
-
