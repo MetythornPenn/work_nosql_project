@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "server": "nodemon index"
+    "server": "nodemon index",
+    "seed" : "node utils/seeder"
   },
   "author": "",
   "license": "ISC",

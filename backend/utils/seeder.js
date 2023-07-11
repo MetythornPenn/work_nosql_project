@@ -1,10 +1,17 @@
 const fs = require('fs');
 const csv = require('csv-parser');
+const path = require('path');
 const mongoose = require('mongoose');
-const Sale = require('../data/data.csv'); // Assuming the model is defined in a separate file
+const Sale = require('../model/sale'); // Assuming the model is defined in a separate file
+
+
+const data_path = path.resolve(__dirname, '../data/data.csv');
 
 // Connect to MongoDB
-mongoose.connect('mongodb://localhost/27017/project', { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect('mongodb://localhost:27017/project', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
 const db = mongoose.connection;
 
 db.on('error', (error) => {
@@ -12,41 +19,38 @@ db.on('error', (error) => {
     process.exit(1);
 });
 
-db.once('open', () => {
+db.once('open', async () => {
     console.log('Connected to MongoDB');
 
     const jsonData = [];
 
-  // Read data from CSV file and convert to JSON
-    fs.createReadStream('data.csv')
-        .pipe(csv({ skipLines: 1 })) // Skip the first line (header)
+    // Read data from CSV file and convert to JSON
+    fs.createReadStream(data_path)
+        .pipe(csv())
         .on('data', (row) => {
         const saleData = {
             InvoiceNo: String(row.InvoiceNo),
             StockCode: String(row.StockCode),
             Description: String(row.Description),
-            Quantity: Number(row.Quantity),
-            InvoiceDate: new Date(row.InvoiceDate),
-            UnitPrice: parseFloat(row.UnitPrice),
+            Quantity: parseFloat(row.Quantity),
+            InvoiceDate: new Date(row['Invoice Date']),
+            UnitPrice: parseFloat(row['Unit Price']),
             CustomerID: String(row.CustomerID),
             Country: String(row.Country)
         };
         jsonData.push(saleData);
         })
-        .on('end', () => {
-            console.log(jsonData);
+        .on('end', async () => {
+        console.log(jsonData);
 
-        // // Save the JSON data to MongoDB
-        // Sale.insertMany(jsonData, (error) => {
+        try {
+            // Save the JSON data to MongoDB
+            await Sale.insertMany(jsonData);
+            console.log('Data import completed');
+        } catch (error) {
+            console.error('Error saving sales:', error);
+        }
 
-        //     if (error) {
-        //     console.error('Error saving sales:', error);
-
-        //     } else {
-        //     console.log('Data import completed');
-        //     }
-
-        //     process.exit(0);
-        // });
-        });
+        process.exit(0);
+    });
 });
