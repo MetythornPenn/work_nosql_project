@@ -1,4 +1,8 @@
 <template>
+  <br>
+  <br>
+  <br>
+  <h2>1. What are the total sales by each country?</h2>
   <div id="chart">
     <apexchart
       type="pie"
@@ -25,7 +29,7 @@ export default {
     chartOptions() {
       return {
         title: {
-          text: "1. What are the total sales by each country?",
+          // text: "1. What are the total sales by each country?",
           align: "center",
           style: {
             fontSize: "20px",

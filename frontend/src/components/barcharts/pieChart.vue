@@ -2,8 +2,8 @@
   <div id="chart">
     <apexchart
       type="pie"
-      :options="chartOptions"
-      :series="series"
+        :options="chartOptions"
+        :series="series"
     ></apexchart>
   </div>
 </template>
