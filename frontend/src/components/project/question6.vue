@@ -40,10 +40,10 @@
             fetch('http://localhost:3000/api/v1/sales/most-contributed-customer')
                 .then(response => response.json())
                 .then(data => {
-                this.customers = data.most_contributed_customer;
+                    this.customers = data.most_contributed_customer;
                 })
                 .catch(error => {
-                console.error('Error:', error);
+                    console.error('Error:', error);
                 });
             }
         }
