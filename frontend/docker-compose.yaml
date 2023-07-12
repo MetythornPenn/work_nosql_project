@@ -1,10 +1,11 @@
-version: "3"
+version: '3.0'
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
+  # VueJS UI Service
+  ui_service:
+    build: .
     ports:
-      - "3000:3000"
+      - 8080:8080
     volumes:
-      - .:/app
+      - "/app/node_modules"
+      - ".:/app"
+      

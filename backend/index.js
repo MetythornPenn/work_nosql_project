@@ -7,13 +7,18 @@ const app = express();
 const saleRoute = require('./controller/sale_controller')
 const userRoute = require('./controller/user_controller')
 const dashboardRoute = require('./controller/dashboard_controller')
+const postRoute = require('./controller/post_controller')
 
+// use json as a format of api
 app.use(express.json());
 
+// cross origin
 app.use(cors({
     origin: '*'
 }));
 
+
+// middleware 
 app.use((req, res, next) => {
     console.log('new request made:');
     console.log('host', req.hostname);
@@ -33,7 +38,9 @@ app.listen(3000, (req, res) => {
     console.log("Service is running with port 3000");
 });
 
+// api router 
 app.use('/api/v1/users' , userRoute);
 app.use('/api/v1/dashboard' , dashboardRoute);
 app.use('/api/v1/sales' , saleRoute);
+app.use('/api/v1/post', postRoute);
 

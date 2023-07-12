@@ -2,19 +2,22 @@
 
 <!-- -------------------------- -->
   <div>
+
     <nav class="navbar">
       <img :src="require('@/assets/logo.png')" alt="Logo" class="logo" />
+
       <div class="navbar-links">
         <router-link to="/" class="navbar-link">Dashboard</router-link> |
         <router-link to="/project" class="navbar-link">Project</router-link> |
         <router-link to="/user" class="navbar-link">User</router-link> |
-        <router-link to="/book" class="navbar-link">Book</router-link>
+        <router-link to="/post" class="navbar-link">Post</router-link>
       </div>
     </nav>
 
     <div class="content">
       <router-view />
     </div>
+    
   </div>
 </template>
 

@@ -1,63 +1,67 @@
 <template>
-  <div class="userList">
-    <h1>User List</h1>
-    <h3 v-if="errorMsg">{{errorMsg}}</h3>
-    <table border="1">
-      <tr>
-        <td>Username</td>
-        <td>Gender</td>
-        <td>MobilePhone</td>
-        <td>Address</td>
-        <td>Action</td>
-      </tr>
-      <tr v-for="user in userList" :key="user._id">
-          <td>{{user.username}}</td>
-          <td>{{user.gender}}</td>
-          <td>{{user.mobilePhone}}</td>
-          <td>{{user.address}}</td>
-          <td>
-            <button @click="deleteData(user._id)">Delete</button> | 
-            <button @click="findData(user._id)">Update</button> 
-            </td>
-      </tr>
-    </table>
-  </div>
+  <div>
 
-  <div class="userAdd">
-    <h1>Add / Update User</h1>
-    <h3 v-if="errorMsg">{{errorMsg}}</h3>
-    <form @submit.prevent="addData">
-    <table border="0">
-      <tr>
-          <td>ID</td>
-          <td><input type="text" v-model="formData._id"/></td>
-      </tr>
-      <tr>
+    <div class="userList">
+      <h1>User List</h1>
+      <h3 v-if="errorMsg">{{errorMsg}}</h3>
+      <table border="1">
+        <tr>
           <td>Username</td>
-          <td><input type="text" v-model="formData.username"/></td>
-      </tr>
-      <tr>
           <td>Gender</td>
-          <td><select v-model="formData.gender">
-              <option value="M">M</option>
-              <option value="F">F</option>
-              </select>
-          </td>
-      </tr>
-      <tr>
-          <td>Mobile Phone</td>
-          <td><input type="text" v-model="formData.mobilePhone"/></td>
-      </tr>
-      <tr>
+          <td>MobilePhone</td>
           <td>Address</td>
-          <td><input type="text" v-model="formData.address"/></td>
-      </tr>
-      <tr>
-          <td><input type="submit" id="Add" value="Add"/></td>
-          <td><input type="button" @click="updateData" id="Update" value="Update"/></td>
-      </tr>
-    </table>
-    </form>
+          <td>Action</td>
+        </tr>
+        <tr v-for="user in userList" :key="user._id">
+            <td>{{user.username}}</td>
+            <td>{{user.gender}}</td>
+            <td>{{user.mobilePhone}}</td>
+            <td>{{user.address}}</td>
+            <td>
+              <button @click="deleteData(user._id)">Delete</button> | 
+              <button @click="findData(user._id)">Update</button> 
+              </td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="userAdd">
+      <h1>Add / Update User</h1>
+      <h3 v-if="errorMsg">{{errorMsg}}</h3>
+      <form @submit.prevent="addData">
+      <table border="0">
+        <tr>
+            <td>ID</td>
+            <td><input type="text" v-model="formData._id"/></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" v-model="formData.username"/></td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td><select v-model="formData.gender">
+                <option value="M">M</option>
+                <option value="F">F</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Mobile Phone</td>
+            <td><input type="text" v-model="formData.mobilePhone"/></td>
+        </tr>
+        <tr>
+            <td>Address</td>
+            <td><input type="text" v-model="formData.address"/></td>
+        </tr>
+        <tr>
+            <td><input type="submit" id="Add" value="Add"/></td>
+            <td><input type="button" @click="updateData" id="Update" value="Update"/></td>
+        </tr>
+      </table>
+      </form>
+    </div>
+
   </div>
 
 </template>
@@ -158,3 +162,8 @@
     }
   }
 </script>
+
+
+
+
+

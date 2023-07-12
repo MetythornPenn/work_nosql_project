@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 import dashboard from '../views/dashboard.vue'
 import user from '../views/user.vue'
-import book from '../views/book.vue'
+import post from '../views/post.vue'
 import project from '../views/project.vue'
 
 const routes = [
@@ -28,12 +28,18 @@ const routes = [
     component: user
   },
 
-  //localhost:8080:/book router 
   {
-    path: '/book',
-    name: book,
-    component: () => import(/* webpackChunkName: "about" */ '../views/book.vue')
+    path: '/post',
+    name: 'post',
+    coponent: post
   }
+
+  //localhost:8080:/book router 
+  // {
+  //   path: '/post',
+  //   name: post,
+  //   component: () => import(/* webpackChunkName: "about" */ '../views/post.vue')
+  // }
 
 ]
 
