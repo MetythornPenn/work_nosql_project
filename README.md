@@ -37,7 +37,9 @@ npm run client
 ```
 <hr>
 
-### Noted : If user want to test API on postman just import file "Project.postman_collection.json" to postman
+### Noted
+
+If user want to test API on postman just import file "Project.postman_collection.json" to postman
 
 <hr>
 
